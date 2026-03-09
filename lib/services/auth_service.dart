@@ -30,21 +30,28 @@ class AuthService {
       User? user = result.user;
 
       if (user != null) {
+        await user.reload();
+        user = _auth.currentUser;
+        
+        if (user == null) {
+          throw Exception('Failed to create user. Please try again.');
+        }
+
+        try {
+          await user.sendEmailVerification();
+        } catch (e) {
+          throw Exception('Failed to send verification email. Please check your Firebase Console settings: $e');
+        }
+
         // Update display name if provided
         if (displayName != null) {
           await user.updateDisplayName(displayName);
           await user.reload();
-          // Get the updated user
           user = _auth.currentUser;
-
-          // If user became null after reload, return null
           if (user == null) {
-            return null;
+            throw Exception('Failed to update user profile');
           }
         }
-
-        // Send email verification - user is guaranteed non-null here
-        await user.sendEmailVerification();
 
         // Create user profile in Firestore
         AppUser appUser = AppUser(

@@ -7,7 +7,7 @@ class AppUser {
   final String? photoUrl;
   final DateTime createdAt;
   final bool emailVerified;
-  final bool notificationsEnabled; // For settings screen requirement
+  final bool notificationsEnabled;
 
   AppUser({
     required this.uid,
