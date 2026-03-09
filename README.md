@@ -47,10 +47,6 @@ A comprehensive mobile application for discovering and managing places in Kigali
 - Instant updates across all users
 - Offline-capable data caching
 
-## Screenshots
-
-*(Add screenshots here when available)*
-
 ## Getting Started
 
 ### Prerequisites
@@ -168,66 +164,5 @@ lib/
 - Follow Flutter's [effective Dart](https://dart.dev/guides/language/effective-dart) guidelines
 - Use `flutter format` for code formatting
 - Run `flutter analyze` to check for issues
-
-## Testing
-
-Run the test suite:
-```bash
-flutter test
-```
-
-## Deployment
-
-### Firebase Hosting (Web)
-```bash
-firebase init hosting
-firebase deploy
-```
-
-### App Stores
-- **Google Play Store**: Build APK/AAB and upload
-- **Apple App Store**: Build IPA and submit via App Store Connect
-
-## Environment Variables
-
-Create a `.env` file in the root directory:
-```
-FIREBASE_API_KEY=your_api_key
-FIREBASE_PROJECT_ID=your_project_id
-```
-
-## Troubleshooting
-
-### Common Issues
-
-**Firebase connection issues:**
-- Verify `google-services.json` is correctly placed
-- Check Firebase project configuration
-- Ensure Firestore rules allow read/write operations
-
-**Map not loading:**
-- Check internet connection
-- Verify OpenStreetMap tile servers are accessible
-
-**Location permissions:**
-- Grant location permissions in device settings
-- Check Geolocator configuration
-
 ## License
-
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-- Built with [Flutter](https://flutter.dev/)
-- Powered by [Firebase](https://firebase.google.com/)
-- Maps powered by [OpenStreetMap](https://www.openstreetmap.org/)
-- Icons from [Material Design Icons](https://materialdesignicons.com/)
-
-## Contact
-
-For questions or support, please open an issue on GitHub or contact the development team.
-
----
-
-**Made with ❤️ for the Kigali community**
